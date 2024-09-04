@@ -53,6 +53,12 @@ def make_rectangle(width, height):
     return rectangle
 print(make_rectangle(5,3))
 
+# def add_numbers_together(num=1,total=0):
+#     while num < 100:
+#         total += num 
+#         num += 1
+#     return total 
+
 
 # Part 2 A -- Make a Stairs
 
@@ -61,16 +67,25 @@ def make_downward_stairs(height):
     for i in range(height):
         stairs += (make_line(i+1) + "\n")
     return stairs
-print(make_downward_stairs(5))
+print(make_downward_stairs(3))
+
+# print()
+# # Part 2 B -- Make Space-Line 
+
+def make_space_line(num_spaces, num_chars):
+    space_line = ""
+    for i in range(num_spaces):
+        space_line += " "
+    for i in range(num_chars):
+        space_line += "#"
+    for i in range(num_spaces):
+        space_line += " "
+    return space_line
+print(make_space_line(3,5))
 
 print()
-# Part 2 B -- Make Space-Line 
 
-
-
-
-
-# Part 2 C -- Make Isosceles Triangle
+# # Part 2 C -- Make Isosceles Triangle
 
 def make_isosceles_triangle(height):
     triangle = ""
@@ -82,7 +97,7 @@ print(make_isosceles_triangle(5))
 
 
 
-# Part 3 -- Make a Diamond
+# # Part 3 -- Make a Diamond
 
 def make_diamond(height):
     diamond = ""
@@ -92,8 +107,4 @@ def make_diamond(height):
         diamond += triangle[i]
     return diamond
 print (make_diamond(5))
-
-
-
-
 
